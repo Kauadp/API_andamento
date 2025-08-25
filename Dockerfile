@@ -18,7 +18,7 @@ COPY api_andamento.R /app/api_andamento.R
 COPY modelos /app/modelos
 
 # Instala pacotes R
-RUN R -e "install.packages(c('plumber','dplyr','forcats','jsonlite'), repos='https://cloud.r-project.org')"
+RUN R -e "install.packages(c('plumber','dplyr','forcats','jsonlite','caret','randomForest'), repos='https://cloud.r-project.org')"
 
 # Expõe porta
 EXPOSE 8000
